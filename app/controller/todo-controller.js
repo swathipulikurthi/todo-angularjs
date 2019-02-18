@@ -2,7 +2,7 @@ angular.module('todoApp').controller('TasksController', ['$scope',
 function ($scope) {
   
   $scope.vm = {};
-  
+  $scope.checked=false;
   $scope.vm.taskName = null;
 
   $scope.vm.tasks = [];

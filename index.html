@@ -27,10 +27,12 @@
                     <ul class="list-group">
                             <li class="list-group-item" ng-repeat="task in vm.tasks">
                                 <div>
-                                    <input type="checkbox">
-                                    
-                                    <label class="mb-0">{{task}}</label>
+                                    <input type="checkbox" ng-model="checked">
 
+                                    <label  ng-if="checked" class="mb=0 text-strike" >{{task}}</label>
+                                    <label class="mb=0" ng-if="!checked" >{{task}}</label>
+                                    
+                                    <!-- <label class="mb-0" ng-class="(checked)?'text-strike':''">{{task}}</label> -->
                                    
                                     <button type="button" class="btn_format" ng-click="vm.removeTask(task);"> X </button>
                                 </div>
