@@ -5,3 +5,14 @@
 .text-strike {
     text-decoration: line-through;
 }
+.btn_format {
+   
+    float: right;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #eeeeee;
+   
+}
+.btn_format:hover {
+    background-color: cyan;
+  }

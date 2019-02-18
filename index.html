@@ -28,7 +28,11 @@
                             <li class="list-group-item" ng-repeat="task in vm.tasks">
                                 <div>
                                     <input type="checkbox">
+                                    
                                     <label class="mb-0">{{task}}</label>
+
+                                   
+                                    <button type="button" class="btn_format" ng-click="vm.removeTask(task);"> X </button>
                                 </div>
                             </li>
                             <!-- <li class="list-group-item">

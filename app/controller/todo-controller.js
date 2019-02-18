@@ -2,10 +2,11 @@ angular.module('todoApp').controller('TasksController', ['$scope',
 function ($scope) {
   
   $scope.vm = {};
-
+  
   $scope.vm.taskName = null;
 
   $scope.vm.tasks = [];
+  $scope.vm.task_close=null;
 
   $scope.vm.addTask = function addTask() {
     if($scope.vm.taskName) {
@@ -14,8 +15,9 @@ function ($scope) {
     }
   };
   $scope.vm.removeTask=function removeTask(taskName){
+    //console.log(taskName);
     if(taskName) {
-      $scope.vm.tasks.splice(tasks.indexOf(taskName), 1);
+      $scope.vm.tasks.splice($scope.vm.tasks.indexOf(taskName), 1);
     }
   }
 }]);
