@@ -16,7 +16,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <input class="form-control" ng-model="vm.taskName" placeholder="Click Submit to add task" />
+                    <input class="form-control" ng-model="input" placeholder="Click Submit to add task" />
                 </div>
                 <div class="col-sm-2">
                     <button type="button" class="btn btn-primary" ng-click="vm.addTask();">Submit</button>
@@ -27,12 +27,12 @@
                     <ul class="list-group">
                             <li class="list-group-item" ng-repeat="task in vm.tasks">
                                 <div>
-                                    <input type="checkbox" ng-model="checked">
+                                    <input type="checkbox" ng-model="task.checked"/>
 
-                                    <label  ng-if="checked" class="mb=0 text-strike" >{{task}}</label>
-                                    <label class="mb=0" ng-if="!checked" >{{task}}</label>
-                                    
-                                    <!-- <label class="mb-0" ng-class="(checked)?'text-strike':''">{{task}}</label> -->
+                                    <label ng-class="{'text-strike text-muted': task.checked}" class="mb-0" >{{task.Name}}</label>
+
+
+                                   
                                    
                                     <button type="button" class="btn_format" ng-click="vm.removeTask(task);"> X </button>
                                 </div>
@@ -55,3 +55,7 @@
         </div>
     </body>
 </html>
+
+
+
+
